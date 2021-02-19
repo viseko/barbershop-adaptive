@@ -1,15 +1,9 @@
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
+@import "../../node_modules/node.normalize.scss/normalize";
 
-.visually-hidden {
-    position: absolute !important;
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important; 
-	width: 1px !important; 
-	overflow: hidden;
-}
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "globals";
+
+@import "blocks/header";
+@import "blocks/nav_main"

@@ -16,8 +16,13 @@
     "autoprefixer": "^10.2.4",
     "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
     "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "node.normalize.scss": "^3.0.3",
+    "normalize.css": "^8.0.1"
   }
 }

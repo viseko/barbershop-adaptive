@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.visually-hidden {
+    position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: 18px;
+    line-height: 27px;
+    font-family: "Arial", sans-serif;
+    color: #f7f4f1;
+    font-style: normal;
+
+    background-color: $bg-darkgrey;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
