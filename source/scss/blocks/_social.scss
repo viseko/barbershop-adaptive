@@ -16,6 +16,7 @@
 
 .social__item {
     // Не требуется
+    width: 33.333%
 }
 
 .social__link {
@@ -23,7 +24,7 @@
     align-items: center;
     justify-content: center;
 
-    @include size(106px);
+    @include size(100%, 106px);
 
     border: 1px solid #3e3e3e;
 
