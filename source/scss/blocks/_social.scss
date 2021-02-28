@@ -1,0 +1,45 @@
+.social {
+
+}
+
+.social__title {
+    display: none;
+}
+
+.social__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include reset-list;
+}
+
+.social__item {
+    // Не требуется
+}
+
+.social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include size(106px);
+
+    border: 1px solid #3e3e3e;
+
+    font-size: 0;
+
+    &:hover {
+        border-color: #515151;
+    }
+
+    &:active {
+        svg {
+            opacity: 0.3;
+        }
+    }
+}
+
+.social__ico {
+    @include size(40px);
+}

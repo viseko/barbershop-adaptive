@@ -1,0 +1,37 @@
+.site-list {
+    display: flex;
+    flex-direction: column;
+    @include reset-list;
+}
+
+.site-list__item {
+    order: 0;
+}
+
+.site-list__item--active {
+    order: -1;
+}
+
+.site-list__item a {
+    display: block;
+    height: 50px;
+    
+    line-height: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+
+    background-color: #826550;
+}
+
+.site-list__item a[href] {
+    &:hover,
+    &:active {
+        background-color: #755a46;
+    }
+
+    &:active {
+        color: rgba(255, 255, 255, 0.3);
+    }
+}

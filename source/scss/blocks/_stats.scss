@@ -1,0 +1,75 @@
+.stats {
+    // Пока пусто
+}
+
+.stats__header {
+    padding: 30px 20px;
+
+    color: #000;
+    background-color: #fff;
+
+    text-align: center;
+}
+
+.stats__slogan {
+    margin: 0;
+
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.stats__intro {
+    margin-top: 24px;
+    padding: 0 5%;
+
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.stats__legend {
+    display: block;
+    padding: 20px;
+
+    text-align: center;
+}
+
+.stats__legend--bottom {
+    color: #4e4e4e;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.stats__legend--top {
+    display: none;
+}
+
+.stats__list {
+    width: 100%;
+
+    tr:nth-child(odd) {
+        background-color: #404040;
+    }
+
+    tr:nth-child(even) {
+        background-color: #4e4e4e;
+    }
+
+    td {
+        padding: 20px 6.25%;
+    }
+
+    td:first-child {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    td:last-child {
+        text-align: right;
+    }
+
+    sup {
+        margin-left: 10px;
+    }
+}

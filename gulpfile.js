@@ -3,26 +3,27 @@ const projectFolder = "build";
 const sourceFolder = "source";
 const path = {
     build: {
-        html: projectFolder + "/",
-        css: projectFolder + "/css/",
-        js: projectFolder + "/js/",
-        img: projectFolder + '/img/',
-        fonts: projectFolder + '/fonts/',
+        html: `${projectFolder}/`,
+        css: `${projectFolder}/css`,
+        js: `${projectFolder}/js`,
+        img: `${projectFolder}/img`,
+        fonts: `${projectFolder}/fonts`
     },
     src: {
-        html: [sourceFolder + "/html/*.html", "!" + sourceFolder + "/html/_*.html"],
-        css: sourceFolder + "/scss/style.scss",
-        js: sourceFolder + "/js/script.js",
-        img: sourceFolder + '/img/**/*.{png,jpg,gif,svg,ico,webp}',
-        fonts: sourceFolder + '/fonts/*.{ttf,woff,woff2}',
+        html: [`${sourceFolder}/html/*.html`, `!${sourceFolder}/html/_*.html`],
+        css: `${sourceFolder}/scss/style.scss`,
+        js: `${sourceFolder}/js/script.js`,
+        img: [`${sourceFolder}/img/**/*.{png,jpg,gif,svg,ico,webp}`, `!${sourceFolder}/img/**/ico-*.svg`],
+        svgIcons: `${sourceFolder}/img/**/ico-*.svg`,
+        fonts: `${sourceFolder}/fonts/*.{ttf,woff,woff2}`
     },
     watch: {
-        html: sourceFolder + "/html/**/*.html",
-        css: sourceFolder + "/scss/**/*.scss",
-        js: sourceFolder + "/js/**/*.js",
-        img: sourceFolder + '/img/**/*.{png,jpg,gif,svg,ico,webp}'
+        html: `${sourceFolder}/html/**/*.html`,
+        css: `${sourceFolder}/scss/**/*.scss`,
+        js: `${sourceFolder}/js/**/*.js`,
+        img: `${sourceFolder}/img/**/*.{png,jpg,gif,svg,ico,webp}`
     },
-    clean: "./" + projectFolder + "/"
+    clean: `./${projectFolder}/`
 };
 
 // Plugins
@@ -40,7 +41,7 @@ const uglify = require("gulp-uglify-es").default;
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const webpHTML = require("gulp-webp-html");
-const webpCSS = require("gulp-webp-css");
+// const webpCSS = require("gulp-webp-css"); // пока тут какой-то косяк, да и не особо нужно
 const svgSprite = require("gulp-svg-sprite");
 const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
@@ -86,9 +87,12 @@ function css() {
 }
 
 function js() {
-    return src(path.src.js)
+    src(path.src.js)
         .pipe(fileInclude())
         .pipe(dest(path.build.js))
+    
+    return src(path.src.js)
+        .pipe(fileInclude())
         .pipe(uglify())
         .pipe(rename({
             extname: ".min.js"
@@ -123,18 +127,17 @@ function fonts() {
         .pipe(dest(path.build.fonts));
 }
 
-gulp.task("svgsprite" , function() {
-    return gulp.src([sourceFolder + "/img/**/ico-*.svg"])
+function spritesSVG() { 
+    return gulp.src(path.src.svgIcons)
         .pipe(svgSprite({
             mode: {
                 stack: {
-                    sprite: "../icons/icons.svg",
-                    example: true
+                    sprite: '../sprite.svg'
                 }
             }
         }))
-        .pipe(dest(path.build.img));
-});
+        .pipe(dest((path.build.img)));
+}
 
 gulp.task("otf2ttf" , function() {
     return gulp.src([sourceFolder + "/fonts/*.otf"])
@@ -155,9 +158,11 @@ function clean() {
     return del(path.clean);
 }
 
-const build = gulp.series(clean, gulp.parallel(js, css, html, img, fonts));
-const watch = gulp.parallel(build, watchFiles, browserSync);
+const build = gulp.series(clean, gulp.parallel(js, css, html, img, fonts, spritesSVG));
+const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
+
+exports.spritesSVG = spritesSVG;
 exports.fonts = fonts;
 exports.img = img;
 exports.js = js; 

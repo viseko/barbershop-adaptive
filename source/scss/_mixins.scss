@@ -1,9 +1,13 @@
-@mixin no-outline {
-    outline: none;
-    background: transparent;
+// Custom mixins
 
-    &::before {
-        display: none;
+@mixin font($font-name, $file-name, $weight, $style) {
+    @font-face {
+        font-family: $font-name;
+        font-display: swap;
+        src: url("../fonts/#{$file-name}.woff") format("woff"),
+            url("../fonts/#{$file-name}.woff") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
     }
 }
 
@@ -12,4 +16,30 @@
     padding: 0;
     
     list-style: none;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// Special mixins
+
+@mixin corner($height, $color) {
+    position: relative;
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        bottom: -$height;
+        left: 0;
+
+        width: 100%;
+        height: $height;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 320 34'%3E%3Cpath d='M0 0l161.429 34L320 0z' fill='%23#{$color}' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+        background-size: 100% $height;
+        background-repeat: no-repeat;
+    }
 }

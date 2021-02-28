@@ -1,0 +1,53 @@
+.slider {
+    // Пока нет стилей
+}
+
+.slider__list {
+    @include reset-list;
+}
+
+.slider__item {
+    display: none;
+}
+
+.slider__item--active {
+    display: block;
+}
+
+.slider__toggles {
+    display: flex;
+    justify-content: center;
+}
+
+.slider__toggle {
+    
+    display: block;
+    padding: 0;
+    width: 10px;
+    height: 10px;
+
+    font-size: 0;
+
+    background: none;
+    border: 1px solid #a5a5a5;
+
+    transform: rotate(45deg);
+}
+
+.slider__toggle:not(:last-child) {
+    margin-right: 25px;
+}
+
+.slider__toggle--active {
+    background-color: #fff;
+}
+
+.slider--dark {
+    .slider__toggle {
+        border-color: #989795;
+    }
+
+    .slider__toggle--active {
+        background-color: #353535;
+    }
+}

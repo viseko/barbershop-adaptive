@@ -1,0 +1,83 @@
+.reviews {
+    padding-bottom: 10px;
+
+    border-top: 1px solid transparent;
+    background-color: $bg-lightgrey;
+
+    color: #000;
+
+    @include corner(40px, "f8f5f2");
+}
+
+.reviews__wrapper {
+    // Не требуется
+}
+
+.reviews__title {
+    // Не требуется
+}
+
+.reviews__write {
+    display: none;
+}
+
+.reviews__list {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    max-width: 500px;
+}
+
+.reviews__item {
+    position: relative;
+
+    margin: 0;
+    padding-left: 70px;
+    min-height: 100px;
+}
+
+.reviews__author-picture {
+    position: absolute;
+    top: 10px;
+    left: 0;
+
+    margin: 0;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.reviews__author-image {
+    // Не требуется
+}
+
+.reviews__author-name {
+    margin: 0;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 27px;
+}
+
+.reviews__text {
+    margin: 0;
+    margin-top: 10px;
+}
+
+.reviews__toggles {
+
+}
+
+.reviews__prev,
+.reviews__next {
+    display: none;
+}
+
+.reviews__prev {
+
+}
+
+.reviews__next {
+
+}

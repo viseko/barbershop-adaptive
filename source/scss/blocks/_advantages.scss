@@ -1,0 +1,47 @@
+.advantages {
+    @include corner(40px, "242424");
+    border-bottom: 1px solid transparent;
+}
+
+.advantages__wrapper {
+// Пока пусто
+}
+
+.advantages__list {
+// Пока пусто
+}
+
+.advantages__item {
+    padding-top: 145px;
+
+    text-align: center;
+
+    background-size: 95px 94px;
+    background-repeat: no-repeat;
+    background-position: center 25px;
+}
+
+.advantages__item--fast {
+    background-image: url(../img/advantages/adv-fast.svg);
+}
+
+.advantages__item--cool {
+    background-image: url(../img/advantages/adv-cool.svg);
+}
+
+.advantages__item--price {
+    background-image: url(../img/advantages/adv-cost.svg);
+}
+
+.advantages__title {
+    margin: 0;
+    margin-top: 10px;
+
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.advantages__description {
+    padding: 0 17%;
+    margin-bottom: 30px;
+}
