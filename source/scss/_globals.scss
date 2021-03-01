@@ -34,11 +34,6 @@ img {
     height: auto;
 }
 
-.wrapper {
-    padding: 0 20px;
-    margin: 0 auto;
-}
-
 h2 {
     font-size: 30px;
     line-height: 30px;
@@ -59,13 +54,23 @@ h2 {
 
     border: 1px solid #e5ddd5;
 
-    &:hover {
+    &:not(:disabled):hover {
         border-color: #d5cabe;
     }
 
-    &:active {
+    &:not(:disabled):active {
         background-color: #d5c9bd;
         color: rgba(#000, 0.3);
+
+        svg {
+            fill: rgba(#000, 0.3);
+        }
+    }
+
+    &:disabled {
+        svg {
+            fill: rgba(#000, 0.3);
+        }
     }
 }
 
@@ -79,6 +84,23 @@ h2 {
     }
 
     &:active {
+        background-color: #252525;
         color: rgba(#fff, 0.3);
+    }
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (min-width: $tablet-width) {
+    body {
+        background-color: #353535;
+    }
+
+    h2 {
+        font-size: 40px;
+        text-align: left;
     }
 }

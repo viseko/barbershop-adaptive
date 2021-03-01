@@ -21,3 +21,30 @@
 .page-footer__copyright {
     // Не требуется
 }
+
+@media (min-width: $tablet-width) {
+    .page-footer {
+
+    }
+
+    .page-footer__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 640px;
+    }
+
+    .page-footer__contacts {
+        width: 320px;
+    }
+
+    .page-footer__copyright {
+        width: 160px;
+    }
+
+    .page-footer__social {
+        width: 100%;
+
+        order: 2;
+    }
+}

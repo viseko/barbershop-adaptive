@@ -3,9 +3,24 @@
 }
 
 .copyright__text {
-
+    font-weight: bold;
 }
 
 .copyright__link {
     margin-top: 10px;
+}
+
+@media (min-width: $tablet-width) {
+    .copyright {
+        padding: 0;
+    }
+
+    .copyright__text {
+        font-weight: normal;
+    }
+
+    .copyright__link {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

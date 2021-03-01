@@ -1,9 +1,11 @@
 .user-list {
     @include reset-list;
+
+    background-color: #6a4d38;
 }
 
 .user-list__item {
-    
+    // Не требуется
 }
 
 .user-list__item a {
@@ -16,11 +18,10 @@
     color: inherit;
     text-decoration: none;
 
-    background-color: #6a4d38;
 }
 
 .user-list__login {
-
+    // Не требуется
 }
 
 .user-list__ico {
@@ -30,4 +31,33 @@
     top: 2px;
 
     margin-right: 5px;
+}
+
+@media (min-width: $tablet-width) {
+    .user-list {
+        background-color: transparent;
+    }
+
+    .user-list__item a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 70px;
+
+        line-height: normal;
+        font-size: 0;
+
+        &:hover svg {
+            fill: #826550;
+        }
+
+        &:active svg {
+            fill: #4d4d4d;
+        }
+    }
+
+    .user-list__ico {
+        top: 0;
+    }
 }

@@ -72,22 +72,24 @@
                 </small>
             </header>
             <table class="stats__list">
-                <tr>
-                    <td class="stats__value">1 500<sup>*</sup></td>
-                    <td class="stats__field">рублей<br> вложений</td>
-                </tr>
-                <tr>
-                    <td class="stats__value">7 200</td>
-                    <td class="stats__field">секунд<br> времени мастера</td>
-                </tr>
-                <tr>
-                    <td class="stats__value">90 000</td>
-                    <td class="stats__field">постриженных<br> волос</td>
-                </tr>
-                <tr>
-                    <td class="stats__value">500 000<sup>*</sup></td>
-                    <td class="stats__field">лайков и<br> комплиментов</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td class="stats__value">1 500<sup>*</sup></td>
+                        <td class="stats__field">рублей<br> вложений</td>
+                    </tr>
+                    <tr>
+                        <td class="stats__value">7 200</td>
+                        <td class="stats__field">секунд<br> времени мастера</td>
+                    </tr>
+                    <tr>
+                        <td class="stats__value">90 000</td>
+                        <td class="stats__field">постриженных<br> волос</td>
+                    </tr>
+                    <tr>
+                        <td class="stats__value">500 000<sup>*</sup></td>
+                        <td class="stats__field">лайков и<br> комплиментов</td>
+                    </tr>
+                </tbody>
             </table>
             <small class="stats__legend stats__legend--bottom">
                 <sup>*</sup> &ndash; приведённые данные ложь
@@ -155,7 +157,7 @@
                                 <b class="news__day">19</b> сент
                             </time>
                             <p class="news__text">
-                                В нашей команде пополнение. Борис &laquo;Бритва&raquo; Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!
+                                В нашей команде пополнение. Борис &laquo;Бритва&raquo; Стригунец, пополнил наши стройные ряды. Спешите записаться!
                             </p>
                         </a>
                     </li>
@@ -265,13 +267,19 @@
                         </p>
                         <cite class="reviews__author-name">Иван Бородайло</cite>
                         <p class="reviews__text">
-                            В Бородинском ваша борода в надёжных руках!
+                            Пиздец, вы че натворили. Нормально всё было, пока к вам не пришел. За что вообще деньги платил ёбанаврот. Теперь на улицу выходить стыдно
                         </p>
                     </blockquote>
-                    <button class="reviews__prev" type="button">
+                    <button class="reviews__prev btn" type="button">
+                        <svg class="reviews__btn-icon" width="12" height="12">
+                            <use xlink:href="img/sprite.svg#icons--ico-arrow-left"></use>
+                        </svg>
                         Предыдущий отзыв
                     </button>
-                    <button class="reviews__next" type="button">
+                    <button class="reviews__next btn" type="button">
+                        <svg class="reviews__btn-icon" width="12" height="12">
+                            <use xlink:href="img/sprite.svg#icons--ico-arrow-left"></use>
+                        </svg>
                         Следующий отзыв
                     </button>
                 </div>
@@ -291,7 +299,7 @@
                     Барбершоп &laquo;Бородинский&raquo;
                 </b>
                 <p class="contacts__text">
-                    г. Санкт-Петербург,<br>ул. Большая Конюшенная 19/8<br>
+                    г. Санкт-Петербург, <br>ул. Большая Конюшенная 19/8<br>
                     <a class="contacts__phone" href="tel:+78125556666">
                         <span class="contacts__phone-mobile">Тел.:</span> +7 (812) 555-66-66
                     </a>

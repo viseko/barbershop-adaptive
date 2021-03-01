@@ -15,11 +15,28 @@
     .page-header__logo {
         order: 2;
         height: 400px;
+        align-items: flex-start;
+
+        background-image: url(../img/bg/back-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        img {
+            @include size(370px, 101px);
+            margin-top: 55px;
+        }
     }
 }
 
 @media (min-width: $desktop-width) {
     .page-header__logo {
         height: 648px;
+        background-image: url(../img/bg/back-desktop.jpg);
+
+        img {
+            height: 153px;
+        }
     }
+
+    
 }

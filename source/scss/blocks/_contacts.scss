@@ -37,3 +37,44 @@
 .contacts__phone-mobile {
     display: none;
 }
+
+@media (min-width: $tablet-width) {
+    .contacts {
+        text-align: left;
+        padding: 0;
+    }
+
+    .contacts__title {
+        text-transform: uppercase;
+    }
+
+    .contacts__text {
+        margin-top: 0.5em;
+    }
+
+    .contacts__text br {
+        display: none;
+    }
+
+    .contacts__phone {
+        display: inline;
+        padding: 0;
+        margin: 0;
+
+        font-weight: normal;
+
+        border: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:active {
+            opacity: 0.6;
+        }
+    }
+
+    .contacts__phone-mobile {
+        display: inline;
+    }
+}

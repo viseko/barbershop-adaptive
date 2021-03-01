@@ -45,3 +45,38 @@
     padding: 0 17%;
     margin-bottom: 30px;
 }
+
+@media (min-width: $tablet-width) {
+    .advantages {
+        @include corner(40px, "353535");
+    }
+
+    .advantages__wrapper {
+        max-width: 640px;
+    }
+
+    .advantages__item {
+        display: block;
+        padding: 20px 0;
+        padding-left: 150px;
+
+        text-align: left;
+
+        background-position: left 30px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #4a4a4a;
+        }
+    }
+
+    .advantages__toggles {
+        display: none;
+    }
+    
+    .advantages__description {
+        padding: 0;
+
+        font-size: 20px;
+        line-height: 27px;
+    }
+}

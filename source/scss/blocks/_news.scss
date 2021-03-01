@@ -99,5 +99,46 @@
 }
 
 .news__to-all {
+    // Не требуется
+}
 
+@media (min-width: $tablet-width) {
+    .news {
+        padding-top: 60px;
+    }
+
+    .news__wrapper {
+        position: relative;
+
+        padding: 0;
+        max-width: 640px;
+    }
+
+    .news__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .news__item {
+        width: 50%;
+        
+        &:first-child {
+            border-bottom: none;
+        }
+    }
+
+    .news__text {
+        padding-right: 30px;
+    }
+
+    .news__to-all {
+        position: absolute;
+        top: -10px;
+        right: 0;
+
+        width: 160px;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
