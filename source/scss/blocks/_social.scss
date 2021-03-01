@@ -1,5 +1,5 @@
 .social {
-
+    // Не требуется
 }
 
 .social__title {
@@ -15,7 +15,6 @@
 }
 
 .social__item {
-    // Не требуется
     width: 33.333%
 }
 
@@ -43,4 +42,29 @@
 
 .social__ico {
     @include size(40px);
+}
+
+@media (min-width: $desktop-width) {
+    .social__title {
+        display: block;
+
+        font-weight: normal;
+    }
+
+    .social__list {
+        margin-top: 10px;
+    }
+
+    .social__item {
+        width: auto;
+        margin: 6px;
+    }
+
+    .social__link {
+        @include size(50px);
+    }
+
+    .social__ico {
+        @include size(19px);
+    }
 }

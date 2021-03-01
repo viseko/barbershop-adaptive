@@ -3,6 +3,8 @@
     padding-bottom: 20px;
 
     text-align: center;
+
+    background-color: $bg-darkgrey;
 }
 
 .page-footer__wrapper {
@@ -23,10 +25,6 @@
 }
 
 @media (min-width: $tablet-width) {
-    .page-footer {
-
-    }
-
     .page-footer__wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -46,5 +44,23 @@
         width: 100%;
 
         order: 2;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .page-footer__wrapper {
+        max-width: 940px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .page-footer__social {
+        width: 320px;
+
+        order: 0;
+    }
+
+    .page-footer__copyright {
+        margin-left: auto;
     }
 }

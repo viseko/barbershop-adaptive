@@ -79,11 +79,11 @@ h2 {
 
     border-color: #3e3e3e;
 
-    &:hover {
+    &:not(:disabled):hover {
         border-color: #515151;
     }
 
-    &:active {
+    &:not(:disabled):active {
         background-color: #252525;
         color: rgba(#fff, 0.3);
     }

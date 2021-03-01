@@ -127,8 +127,15 @@
         margin: 0 auto;
         padding: 0 40px;
         width: 100%;
+        max-width: 780px;
         height: auto;
         overflow: visible;
     }
 }
 
+@media (min-width: $desktop-width) {
+    .main-nav__wrapper {
+        max-width: 960px;
+        padding: 0;
+    }
+}

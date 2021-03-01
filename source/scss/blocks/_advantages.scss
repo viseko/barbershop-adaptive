@@ -80,3 +80,32 @@
         line-height: 27px;
     }
 }
+
+@media (min-width: $desktop-width) {
+    .advantages__wrapper {
+        max-width: 960px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .advantages__list {
+        display: flex;
+    }
+
+    .advantages__item {
+        border-bottom: none;
+        padding-top: 125px;
+        padding-left: 42px;
+        padding-right: 42px;
+        padding-bottom: 0;
+
+        text-align: center;
+        
+        background-position: top center;
+
+        &:not(:last-child) {
+            border-right: 1px solid #4a4a4a;
+            border-bottom: none;
+        }
+    }
+}

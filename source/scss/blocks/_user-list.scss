@@ -61,3 +61,34 @@
         top: 0;
     }
 }
+
+@media (min-width: $desktop-width) {
+    .user-list__item a {
+        padding-right: 20px;
+
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: #fff;
+            color: #000;
+
+            svg {
+                fill: #b6b6b6;
+            }
+        }
+
+        &:active {
+            color: rgba(#000, 0.3);
+
+            svg {
+                fill: rgba(#000, 0.1);
+            }
+        }
+    }
+
+    .user-list__ico {
+        margin-right: 15px;
+    }
+}

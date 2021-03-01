@@ -27,7 +27,7 @@
         border-bottom: 1px solid #e5ddd5;
     }
 
-    &:nth-child(3) {
+    &:last-child {
         display: none;
     }
 }
@@ -140,5 +140,19 @@
         width: 160px;
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .news__wrapper {
+        min-width: 960px;
+    }
+
+    .news__item {
+        width: 33.333%;
+
+        &:last-child {
+            display: block;
+        }
     }
 }
