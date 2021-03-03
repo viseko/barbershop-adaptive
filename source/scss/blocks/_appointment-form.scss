@@ -320,6 +320,10 @@
     }
   }
 
+  .appointment-form__message textarea {
+    height: 211px;
+  }
+
   .appointment-form__beard-choise,
   .appointment-form__addition-services {
     border-top: 1px solid #e5ddd5;
@@ -346,6 +350,32 @@
 }
 
 @media (min-width: $desktop-width) {
+  .appointment-form__passport-data {
+    justify-content: space-between;
+
+    input {
+      width: calc((100% - 37px * 2) / 3) !important;
+    }
+
+    input:nth-child(2) {
+      border-left: 1px solid #e5ddd5;
+      border-right: 1px solid #e5ddd5;
+    }
+  }
+
+  .appointment-form__contacts {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: calc((100% - 35px) / 2) !important;
+    }
+
+    input:first-child {
+      margin-bottom: 0;
+    }
+  }
+
   .appointment-form__addition-service {
     width: calc(33.33% - 1px);
     // Смещение 1px из-за невидимого чекбокса с относ. позиционированием

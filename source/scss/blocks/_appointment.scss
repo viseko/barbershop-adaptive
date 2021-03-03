@@ -15,6 +15,10 @@
   width: 280px;
 }
 
+.appointment__to-index {
+  display: none;
+}
+
 .appointment__title {
   // Не требуется
 }
@@ -22,6 +26,7 @@
 .appointment___form {
   // Не требуется
 }
+
 
 @media (min-width: $tablet-width) {
   .appointment {
@@ -36,7 +41,16 @@
   }
 
   .appointment__wrapper {
+    position: relative;
+
     width: 640px;
+  }
+
+  .appointment__to-index {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -15px;
   }
 
   .appointment___form {
