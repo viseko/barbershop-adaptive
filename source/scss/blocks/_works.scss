@@ -1,0 +1,200 @@
+.works {
+    position: relative;
+
+    color: #000;
+
+    background-color: $bg-lightgrey;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+
+    @include corner(40px, "f8f5f2");
+    
+    z-index: 1;
+}
+
+.works__wrapper {
+    margin: auto;
+    width: 280px;
+    padding: 0;
+}
+
+.works__to-index {
+    display: none;
+}
+
+.works__list {
+    // Не требуется
+}
+
+.works__item {
+    margin: 20px 0;
+
+    border: 1px solid #e5ddd5;
+}
+
+.works__item--month {
+    // Здесь нужно сделать плашку
+}
+
+.works__picture {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.works__image {
+    vertical-align: bottom;
+}
+
+.works__description {
+    padding: 20px;
+    margin: 0;
+}
+
+.works__client-name {
+    font-size: 24px;
+    line-height: 27px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.works__review {
+    margin: 20px 0 5px;
+}
+
+.works__features {
+    @include reset-list;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.works__feature {
+    width: 50%;
+    margin-top: 15px;
+
+    svg {
+        position: relative;
+        top: 3px;
+
+        fill: #826550;
+    }
+}
+
+.works__feature--haircut {
+    svg {
+        width: 21px;
+        height: 20px;
+        margin-right: 12px;
+    }
+}
+
+.works__feature--shave {
+    svg {
+        width: 23px;
+        height: 21px;
+        margin-right: 20px;
+    }
+}
+
+.works__feature--mustache {
+    svg {
+        right: 12px;
+        
+        width: 45px;
+        height: 12px;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .works {
+        padding-top: 30px;
+
+        @include corner-reverse(65px, "f8f5f2");
+    }
+
+    .works__wrapper {
+        position: relative;
+        width: 640px;
+    }
+
+    .works__item {
+        display: flex;
+    }
+
+    .works__picture {
+        width: 270px;
+        flex-shrink: 0;
+    }
+
+    .works__description {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        padding-left: 53px;
+    }
+
+    .works__features {
+        margin-top: auto;
+    }
+
+    .works__feature {
+        width: auto;
+        margin-right: 30px;
+    }
+
+    .works__to-index {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -15px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .works::after {
+        display: none;
+    }
+
+    .works__wrapper {
+        width: 960px;
+    }
+
+    .works__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .works__item {
+        flex-direction: column;
+        width: 294px;
+    }
+
+    .works__item:not(:nth-child(3n + 1)) {
+        margin-right: 39px;
+    }
+
+    .works__picture {
+        width: 100%;
+    }
+
+    .works__item:first-child {
+        flex-direction: row;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .works__item:first-child .works__picture {
+        width: 480px;
+    }
+
+    .works__item:not(:first-child) .works__features {
+        width: 100%;
+    }
+
+    .works__item:not(:first-child) .works__feature {
+        width: 50%;
+        margin-right: 0;
+    }
+}

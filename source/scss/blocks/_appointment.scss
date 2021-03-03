@@ -1,0 +1,51 @@
+.appointment {
+  padding-bottom: 40px;
+
+  color: #000;
+
+  background-color: $bg-lightgrey;
+  border-top: 1px solid transparent;
+
+  @include corner(40px, "f8f5f2");
+}
+
+.appointment__wrapper {
+  padding: 0;
+  margin: auto;
+  width: 280px;
+}
+
+.appointment__title {
+  // Не требуется
+}
+
+.appointment___form {
+  // Не требуется
+}
+
+@media (min-width: $tablet-width) {
+  .appointment {
+    padding-top: 30px;
+    padding-bottom: 75px;
+
+    @include corner-reverse(65px, "f8f5f2");
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .appointment__wrapper {
+    width: 640px;
+  }
+
+  .appointment___form {
+    padding-top: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .appointment__wrapper {
+    width: 960px;
+  }
+}

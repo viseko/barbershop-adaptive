@@ -1,7 +1,7 @@
 @@include("./includes/_header.html")
 
 <header class="page-header">
-    <a href="index.html" class="page-header__logo">
+    <a href="index.html" class="page-header__logo page-header__logo--inner">
         <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -61,19 +61,31 @@
                             <img class="works__image" src="img/photos/photo-1-mobile.jpg" alt="Лжепётр Мчиславский">
                         </picture>
                     </figure>
-                    <div class="works__description">
-                        <blockquote>
-                            <cite class="works__client-name">Лжепётр Мчиславский</cite>
-                            <p class="wors__review">
-                                Где я только не стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
-                            </p>
-                        </blockquote>
-                    </div>
-                    <ul class="works__features">
-                        <li class="works__feature works__feature--haircut" >Стрижка</li>
-                        <li class="works__feature works__feature--shave">Бритье</li>
-                        <li class="works__feature works__feature--mustache">Усы</li>
-                    </ul>
+                    <blockquote class="works__description">
+                        <cite class="works__client-name">Лжепётр Мчиславский</cite>
+                        <p class="works__review">
+                            Где я только не стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
+                        </p>
+                        <ul class="works__features">
+                            <li class="works__feature works__feature--haircut" >
+                                <svg class="work__ico" width="20" height="20">
+                                    <use xlink:href="img/sprite.svg#icons--ico-scissors"></use>
+                                </svg>
+                                Стрижка
+                            </li>
+                            <li class="works__feature works__feature--shave">
+                                <svg class="work__ico" width="20" height="20">
+                                    <use xlink:href="img/sprite.svg#icons--ico-beard"></use>
+                                </svg>
+                                Бритье</li>
+                            <li class="works__feature works__feature--mustache">
+                                <svg class="work__ico" width="20" height="20">
+                                    <use xlink:href="img/sprite.svg#icons--ico-mustaches"></use>
+                                </svg>
+                                Усы
+                            </li>
+                        </ul>
+                    </blockquote>
                 </div>
                 <div class="works__item">
                     <figure class="works__picture">
@@ -86,17 +98,20 @@
                             <img class="works__image" src="img/photos/photo-2-mobile.jpg" alt="Саша Мальцев">
                         </picture>
                     </figure>
-                    <div class="works__description">
-                        <blockquote>
-                            <cite class="works__client-name">Саша Мальцев</cite>
-                            <p class="wors__review">
-                                Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
-                            </p>
-                        </blockquote>
-                    </div>
-                    <ul class="works__features">
-                        <li class="works__feature works__feature--haircut" >Стрижка</li>
-                    </ul>
+                    <blockquote class="works__description">
+                        <cite class="works__client-name">Саша Мальцев</cite>
+                        <p class="wors__review">
+                            Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
+                        </p>
+                        <ul class="works__features">
+                            <li class="works__feature works__feature--haircut" >
+                                <svg class="work__ico" width="20" height="20">
+                                    <use xlink:href="img/sprite.svg#icons--ico-scissors"></use>
+                                </svg>
+                                Стрижка
+                            </li>
+                        </ul>
+                    </blockquote>
                 </div>
                 <div class="works__item">
                     <figure class="works__picture">
@@ -109,18 +124,25 @@
                             <img class="works__image" src="img/photos/photo-3-mobile.jpg" alt="Лжепётр Мчиславский">
                         </picture>
                     </figure>
-                    <div class="works__description">
-                        <blockquote>
-                            <cite class="works__client-name">Владимир Иванович</cite>
-                            <p class="wors__review">
-                                К зимнему сезону — готов!
-                            </p>
-                        </blockquote>
-                    </div>
-                    <ul class="works__features">
-                        <li class="works__feature works__feature--shave">Бритье</li>
-                        <li class="works__feature works__feature--mustache">Усы</li>
-                    </ul>
+                    <blockquote class="works__description">
+                        <cite class="works__client-name">Владимир Иванович</cite>
+                        <p class="wors__review">
+                            К зимнему сезону — готов!
+                        </p>
+                        <ul class="works__features">
+                            <li class="works__feature works__feature--shave">
+                                <svg class="work__ico" width="20" height="20">
+                                    <use xlink:href="img/sprite.svg#icons--ico-beard"></use>
+                                </svg>
+                                Бритье</li>
+                            <li class="works__feature works__feature--mustache">
+                                <svg class="work__ico" width="20" height="20">
+                                    <use xlink:href="img/sprite.svg#icons--ico-mustaches"></use>
+                                </svg>
+                                Усы
+                            </li>
+                        </ul>
+                    </blockquote>
                 </div>
                 <div class="works__item">
                     <figure class="works__picture">
@@ -133,71 +155,74 @@
                             <img class="works__image" src="img/photos/photo-4-mobile.jpg" alt="Лжепётр Мчиславский">
                         </picture>
                     </figure>
-                    <div class="works__description">
-                        <blockquote>
+                    <blockquote class="works__description">
                             <cite class="works__client-name">Винстон Синий</cite>
                             <p class="wors__review">
                                 Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
                             </p>
-                        </blockquote>
-                    </div>
-                    <ul class="works__features">
-                        <li class="works__feature works__feature--haircut" >Стрижка</li>
-                    </ul>
+                        <ul class="works__features">
+                            <li class="works__feature works__feature--haircut" >
+                                <svg class="work__ico" width="20" height="20">
+                                    <use xlink:href="img/sprite.svg#icons--ico-scissors"></use>
+                                </svg>
+                                Стрижка
+                            </li>
+                        </ul>
+                    </blockquote>
                 </div>
             </div>
         </div>
     </section>
     <section class="price">
-        <div class="price__wrapper wrapper">
+        <div class="price__wrapper">
             <h2 class="price__title">Прейскурант</h2>
-            <table class="price__table">
+            <table class="price__table price-table">
                 <tbody>
                     <tr>
-                        <td class="price__num">1</td>
-                        <td class="price__service">Классическая стрижка</td>
-                        <td class="price__wash">
-                            <span class="price__hidden-brackets">с мытьём головы</span>
+                        <td class="price-table__num">1</td>
+                        <td class="price-table__service">Классическая стрижка</td>
+                        <td class="price-table__wash">
+                            <span class="price-table__hidden-brackets">с мытьём головы</span>
                         </td>
-                        <td class="price__cost">1 500 руб.</td>
+                        <td class="price-table__cost">1 500 руб.</td>
                     </tr>
                     <tr>
-                        <td class="price__num">2</td>
-                        <td class="price__service">Современный вариант</td>
-                        <td class="price__wash">
-                            <span class="price__hidden-brackets">с мытьём головы</span>
+                        <td class="price-table__num">2</td>
+                        <td class="price-table__service">Современный вариант</td>
+                        <td class="price-table__wash">
+                            <span class="price-table__hidden-brackets">с мытьём головы</span>
                         </td>
-                        <td class="price__cost">1 500 руб.</td>
+                        <td class="price-table__cost">1 500 руб.</td>
                     </tr>
                     <tr>
-                        <td class="price__num">3</td>
-                        <td class="price__service">Индивидуальный подход</td>
-                        <td class="price__wash">
-                            <span class="price__hidden-brackets">с мытьём головы</span>
+                        <td class="price-table__num">3</td>
+                        <td class="price-table__service">Индивидуальный подход</td>
+                        <td class="price-table__wash">
+                            <span class="price-table__hidden-brackets">с мытьём головы</span>
                         </td>
-                        <td class="price__cost">2 000 руб.</td>
+                        <td class="price-table__cost">2 000 руб.</td>
                     </tr>
                     <tr>
-                        <td class="price__num">4</td>
-                        <td class="price__service">Бритьё головы</td>
-                        <td class="price__wash">
-                            <span class="price__hidden-brackets">без мытья</span>
+                        <td class="price-table__num">4</td>
+                        <td class="price-table__service">Бритьё головы</td>
+                        <td class="price-table__wash">
+                            <span class="price-table__hidden-brackets">без мытья</span>
                         </td>
-                        <td class="price__cost">500 руб.</td>
+                        <td class="price-table__cost">500 руб.</td>
                     </tr>
                     <tr>
-                        <td class="price__num">5</td>
-                        <td class="price__service">Бритьё головы</td>
-                        <td class="price__wash">
-                            <span class="price__hidden-brackets">с мытьём головы</span>
+                        <td class="price-table__num">5</td>
+                        <td class="price-table__service">Бритьё головы</td>
+                        <td class="price-table__wash">
+                            <span class="price-table__hidden-brackets">с мытьём головы</span>
                         </td>
-                        <td class="price__cost">1 500 руб.</td>
+                        <td class="price-table__cost">1 500 руб.</td>
                     </tr>
                 </tbody>
             </table>
-            <div class="price__discount discount">
-                <div class="discount-clock"></div>
-                <p class="discount-info">
+            <div class="price__discount discount-clock">
+                <div class="discount-clock__clock"></div>
+                <p class="discount-clock__info">
                     С 10:00 до 14:00 скидка 20%
                 </p>
             </div>

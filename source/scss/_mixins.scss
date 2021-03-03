@@ -43,3 +43,21 @@
         background-repeat: no-repeat;
     }
 }
+
+@mixin corner-reverse($height, $color) {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -$height;
+
+        width: 100%;
+        height: $height;
+
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 320 34'%3E%3Cpath d='M0 0v34h160zm320 0v34H160z' fill='%23#{$color}' fill-rule='evenodd'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 100% $height;
+    }
+}

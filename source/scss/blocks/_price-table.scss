@@ -1,0 +1,66 @@
+.price-table {
+  width: 100%;
+
+  font-size: 20px;
+}
+
+.price-table tr {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-bottom: 15px;
+}
+
+.price-table__num {
+  display: none;
+}
+
+.price-table__service {
+  flex-grow: 1;
+
+  font-weight: bold;
+}
+
+.price-table__wash {
+  width: 100%;
+  order: 1;
+}
+
+.price-table__hidden-brackets {
+  &::before {
+    content: "(";
+  }
+
+  &::after {
+    content: ")";
+  }
+}
+
+.price-table__cost {
+  width: 80px;
+}
+
+@media (min-width: $tablet-width) {
+  .price-table tr {
+    display: table-row;
+  }
+
+  .price-table td {
+    width: auto;
+    padding: 14px 15px 15px;
+
+    border: 1px solid #484848;
+  }
+
+  .price-table__num {
+    display: table-cell;
+
+    text-align: center;
+    color: rgba(#fff, 0.3);
+  }
+
+  .price-table__hidden-brackets::before,
+  .price-table__hidden-brackets::after {
+    display: none;
+  }
+}

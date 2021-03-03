@@ -26,6 +26,14 @@
             margin-top: 55px;
         }
     }
+
+    .page-header__logo--inner {
+        height: 220px;
+
+        img {
+            margin-top: 40px;
+        }
+    }
 }
 
 @media (min-width: $desktop-width) {
@@ -38,5 +46,11 @@
         }
     }
 
-    
+    .page-header__logo--inner {
+        height: 315px;
+
+        img {
+            margin-top: 55px;
+        }
+    }
 }
