@@ -1,0 +1,31 @@
+<section class="modal modal__login login-form">
+  <h2 class="login-form__title">Личный кабинет</h2>
+  <p>Введите свой логин и пароль, чтобы войти</p>
+  <form action="https://echo.htmlacademy.ru" class="login-form__form" method="POST">
+    <label class="login-form__input-wrapper login-form__input-wrapper--login">
+      <input type="text" name="login" placeholder="Логин" required>
+      <svg class="login-form__ico" width="15" height="15">
+        <use xlink:href="img/sprite.svg#icons--ico-user"></use>
+      </svg>
+    </label>
+    <label class="login-form__input-wrapper login-form__input-wrapper--password">
+      <input type="password" name="password" placeholder="Пароль" required>
+      <svg class="login-form__ico" width="15" height="17">
+        <use xlink:href="img/sprite.svg#icons--ico-lock"></use>
+      </svg>
+    </label>
+    <div class="login-form__row">
+      <input id="remember" type="checkbox" name="remember" value="true">
+      <label for="remember">
+        Запомните меня
+      </label>
+      <a href="#" class="login-form__forgot">
+        Я забыл пароль!
+      </a>
+    </div>
+    <div class="login-form__row login-form__row">
+      <input type="submit" class="btn login-form__submit" value="Войти">
+      <button type="button" class="btn modal__close login-form__close">Закрыть</button>
+    </div>
+  </form>
+</section>

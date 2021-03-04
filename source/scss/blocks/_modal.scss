@@ -1,0 +1,37 @@
+.modal {
+  display: none;
+}
+
+.modal--open {
+  display: block;
+}
+
+.modal__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(#000, 0.3);
+
+  z-index: 1000;
+}
+
+.modal__login {
+  position: absolute;
+  top: 135px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  box-shadow: 0 30px 50px 0 rgba(#000, 0.75);
+
+  z-index: 1001;
+}
+
+@media (min-width: $tablet-width) {
+  .modal__login {
+    top: 128px;
+  }
+}
