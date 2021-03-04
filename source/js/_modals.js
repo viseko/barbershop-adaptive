@@ -13,8 +13,6 @@ for (let i = 0; i < modalCloseBtn.length; i++) {
   modalCloseBtn[i].addEventListener("click", closeModal);
 }
 
-modalWrapper.addEventListener("click", closeModal);
-
 function closeModal() {
   let modals = document.querySelectorAll('.modal--open');
   for (let i = 0; i < modals.length; i++) {
