@@ -90,6 +90,15 @@
     // Не требуется
 }
 
+.main-nav.nojs {
+    height: auto;
+}
+
+.nojs .main-nav__wrapper {
+    position: static;
+    height: auto;
+}
+
 @media (max-width: $tablet-width - 1px) {
     .main-nav__toggle--toggled + .main-nav__wrapper {
         height: auto;
